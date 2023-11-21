@@ -1,0 +1,71 @@
+                var adminTitolare = document.getElementById("adminTitolare");
+                var adminCodiceCantiere = document.getElementById("adminCodiceCantiere");
+                var adminComuneCantiere = document.getElementById("adminComuneCantiere");
+                var adminEmail = document.getElementById("adminEmail");
+                var optadminNuovaImpresa = document.getElementById("optadminNuovaImpresa");
+                var optadminNuovoCantiere = document.getElementById("optadminNuovoCantiere");
+                var optadminNuovoSubappalto = document.getElementById("optadminNuovoSubappalto");
+                var optadminInserimentoOre = document.getElementById("optadminInserimentoOre");
+                var optadminAttestazioneCongruita = document.getElementById("optadminAttestazioneCongruita");
+
+                
+                const adminVerificaTesto = [adminComuneCantiere, adminTitolare];
+                adminVerificaTesto.forEach(addEventListenerVerificaTesto);
+                addEventListenerVerificaTesto2(adminCodiceCantiere);
+                
+                adminEmail.addEventListener("focusout", function i(ev){ 
+                var sintassiEmail = controlloformatoemail(adminEmail.value);
+                adminEmail.value = adminEmail.value.trim();
+            
+                if(adminEmail.value.lenght == 0){
+                    evidenziaErrore(adminEmail);
+                }
+
+                if(sintassiEmail){
+                    resettaErrore(adminEmail);
+                }
+                else{
+                    evidenziaErrore(adminEmail);
+                }
+            });
+
+            function opt1(){
+                    adminTitolare.hidden = false;
+                    adminCodiceCantiere.hidden = true;
+                    adminComuneCantiere.hidden = true;
+                    adminEmail.hidden = false;  
+            }
+
+            function opt2(){
+                    adminTitolare.hidden = false;
+                    adminCodiceCantiere.hidden = true;
+                    adminComuneCantiere.hidden = false;
+                    adminEmail.hidden = false;  
+            }
+            
+            function opt3(){
+                    adminTitolare.hidden = false;
+                    adminCodiceCantiere.hidden = false;
+                    adminComuneCantiere.hidden = true;
+                    adminEmail.hidden = false;  
+            }
+
+            function opt4(){
+
+                adminTitolare.hidden = false;
+                    adminCodiceCantiere.hidden = false;
+                    adminComuneCantiere.hidden = true;
+                    adminEmail.hidden = false;  
+            }
+
+            function opt5(){
+                    adminTitolare.hidden = false;
+                    adminCodiceCantiere.hidden = false;
+                    adminComuneCantiere.hidden = true;
+                    adminEmail.hidden = false;    
+            }
+
+
+
+            optadminNuovaImpresa.checked = true;
+            opt1();
