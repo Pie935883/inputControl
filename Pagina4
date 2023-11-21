@@ -1,0 +1,45 @@
+var orecantiere = document.getElementById("orecantiere");
+var orenomeCognome = document.getElementById("orenomeCognome");
+var oreore = document.getElementById("oreore");
+var oreanno = document.getElementById('oreanno');
+var oreTitolare = document.getElementById("oreTitolare");
+const oreControlliTesto = [orenomeCognome, oreTitolare];
+
+oreControlliTesto.forEach(addEventListenerVerificaTesto); 
+
+addEventListenerVerificaTesto2(orecantiere);
+
+oreore.addEventListener("focusout", function r(ev){
+    oreore.value = oreore.value.trim();
+    if(oreore.value > 172){
+    oreore.value = 172;
+    oreore.focus();
+    alert("massimo 172 ore");
+    resettaErrore(oreore);
+}
+    if(oreore.value.length == 0){
+        evidenziaErrore(oreore);
+    }
+    else
+        resettaErrore(oreore);
+});
+
+function inserisciAnnoAttuale() {
+    /*
+    var dataCorrente = new Date();
+    var annoAttuale = dataCorrente.getFullYear();
+    oreanno.value = annoAttuale;
+    */
+   
+    oreanno.addEventListener("focusout", function r(ev){
+
+        if(oreanno.value >= 2021 && oreanno.value <= 2050){
+            resettaErrore(oreanno);
+        }
+        else{
+            evidenziaErrore(oreanno);
+        }
+    });    
+  }
+    inserisciAnnoAttuale();
+
