@@ -1,0 +1,16 @@
+var subappaltoCodiceFiscale = document.getElementById("subappaltoCodiceFiscale");
+var subappaltoIVA = document.getElementById("subappaltoIVA");
+var subappaltoDenominazione = document.getElementById("subappaltoDenominazione");
+var subappaltoDataInizio = document.getElementById("subappaltoDataInizio");
+var subappaltoDataFine = document.getElementById("subappaltoDataFine");
+var subappaltoTitolare = document.getElementById("subappaltoTitolare");
+var subappaltoCantiere = document.getElementById("subappaltoCantiere");
+const subappaltoControlliTesto = [subappaltoTitolare, subappaltoDenominazione];
+const subappaltoControlliDate = [subappaltoDataInizio, subappaltoDataFine];
+
+subappaltoControlliDate.forEach(addEventListenerVerificaData);
+subappaltoControlliTesto.forEach(addEventListenerVerificaTesto);
+
+addEventListenerVerificaTesto2(subappaltoCantiere);
+addEventListenerVerificaIVA(subappaltoIVA);
+addEventListenerVerificaCodiceFiscale(subappaltoCodiceFiscale);
