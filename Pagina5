@@ -1,0 +1,31 @@
+var congruitadataChiusura = document.getElementById("congruitadataChiusura");
+var congruitanomeCognome = document.getElementById("congruitanomeCognome");
+var congruitacodiceFiscale = document.getElementById("congruitacodiceFiscale");
+var congruitaPEC = document.getElementById("congruitaPEC");
+var congruitacantiere = document.getElementById("congruitacantiere");
+var congruitaTitolare = document.getElementById("congruitaTitolare");
+const congruitaControlliTesto = [congruitanomeCognome, congruitaTitolare];
+
+congruitaControlliTesto.forEach(addEventListenerVerificaTesto);
+
+addEventListenerVerificaTesto2(congruitacantiere);
+addEventListenerVerificaData(congruitadataChiusura);
+addEventListenerVerificaCodiceFiscale(congruitacodiceFiscale);
+
+    
+congruitaPEC.addEventListener("focusout", function i(ev){ 
+    var sintassiEmail = controlloformatoemail(congruitaPEC.value);
+    congruitaPEC.value = congruitaPEC.value.trim();
+   
+    if(congruitaPEC.value.lenght == 0){
+        evidenziaErrore(congruitaPEC);
+    }
+
+    if(sintassiEmail){
+        resettaErrore(congruitaPEC);
+    }
+    else{
+        evidenziaErrore(congruitaPEC);
+    }
+});
+
