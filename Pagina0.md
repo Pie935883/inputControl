@@ -1,8 +1,7 @@
  var controlliNuovaImpresa = "nuovaIVA;nuovaEmail;nuovaPEC;nuovaCodiceFiscale;nuovaCognome;nuovaNome;nuovaDenominazione";
-    var controlliNuovoCantiere = "cantiereindirizzoCivico;cantiereCAP;cantierecomune;cantierenumeroNotifica;cantieredataInizio;cantieredataFine;cantieredescrizione;cantierenomeCognome;cantiereindirizzo;cantiereCAP1;cantierecomune1;cantieremail;cantierePEC;cantiereimportoComplessivo;cantiereimportoEdili;cantiererecapiti;cantieremail1;cantiereorari;cantiereTitolare";
-    var controlliNuovoSubappalto = "subappaltoTitolare;subappaltoCantiere;subappaltoDenominazione;subappaltoCodiceFiscale;subappaltoIVA;subappaltoDataInizio;subappaltoDataFine";
-    //var controlliNuovoSubappalto = "subappaltoTitolare;subappaltoCantiere;subappaltoDenominazione;subappaltoCodiceFiscale;subappaltoIVA;subappaltoDataInizio;subappaltoDataFine";
-    //SF BEBUG purpuoses var controlliNuovoSubappalto = "subappaltoTitolare";
+ var controlliNuovoCantiere = "cantiereindirizzoCivico;cantiereCAP;cantierecomune;cantierenumeroNotifica;cantieredataInizio;cantieredataFine;cantieredescrizione;cantierenomeCognome;cantiereindirizzo;cantiereCAP1;cantierecomune1;cantieremail;cantierePEC;cantiereimportoComplessivo;cantiereimportoEdili;cantiererecapiti;cantieremail1;cantiereorari;cantiereTitolare";
+ var controlliNuovoSubappalto = "subappaltoTitolare;subappaltoCantiere;subappaltoDenominazione;subappaltoCodiceFiscale;subappaltoIVA;subappaltoDataInizio;subappaltoDataFine";
+   
     var controlliInserimentoOre = "oreTitolare;orecantiere;oreanno;orenomeCognome;oreore";
     var controlliAttestazioneCongruita = "congruitadataChiusura;congruitanomeCognome;congruitacodiceFiscale;congruitaPEC;congruitacantiere;congruitaTitolare";
 
